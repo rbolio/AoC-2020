@@ -1,5 +1,2 @@
-import time
-
-def clckMs(s,e):
-  return rount((e -s) * 1000)
-
+def clckMs(s, e):
+    return round((e - s) * 1000)
