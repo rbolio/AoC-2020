@@ -18,8 +18,7 @@ input_values_1 = [1446, 1893, 1827, 1565, 1728, 497, 1406, 1960, 1986, 1945, 173
 
 def part1():
     start = time.time()
-    x, y = solve_1(input_values_1)
-    solution = (x * y)
+    solution = solve_1(input_values_1)
     end = time.time()
     print(f"total time = {clckMs(start, end)}")
     return solution
@@ -28,15 +27,13 @@ def part1():
 def solve_1(input_list):
     for x in input_list:
         for y in input_list:
-            addition = x + y
-            if addition == 2020:
-                return x, y
+            if x + y == 2020:
+                return x * y
 
 
 def part2():
     start = time.time()
-    x, y, z = solve_2(input_values_1)
-    solution = (x * y * z)
+    solution = solve_2(input_values_1)
     end = time.time()
     print(f"p2: total time = {clckMs(start, end)}")
     return solution
@@ -46,11 +43,10 @@ def solve_2(input_list):
     for x in input_list:
         for y in input_list:
             for z in input_list:
-                addition = x + y + z
-                if addition == 2020:
-                    return x, y, z
+                if x + y + z == 2020:
+                    return x * y * z
 
 
 if __name__ == '__main__':
-    print (f"part one answer: {part1()}")
-    print (f"part two answer: {part2()}")
+    print(f"part one answer: {part1()}")
+    print(f"part two answer: {part2()}")
